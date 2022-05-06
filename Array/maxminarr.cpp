@@ -108,3 +108,78 @@ struct pair getMinMax(int arr[], int low, int high){
   
   return minmax;
 }
+
+
+
+// Method 3
+
+#include<iostream>
+using namespace std
+ 
+ struct Pair{
+  int max;
+  int min;
+ }
+
+struct Pair getMinmax(int arr[], int n){
+ struict Pair minmax;
+ int i;
+ 
+ //If there is even no of element in the array
+ 
+ if(n%2 == 0) {
+  if(arr[0] > arr[1]){
+   minmax.max = arr[0];
+   minmax.min = arr[1];
+  }
+  else{
+   minmax.max = [1];
+   minmax.min = [0];
+  }
+  i = 2;
+ }//even
+ 
+ //If there is odd no of element in the array
+ 
+ else {
+  minmax.max =[0];
+  minmax.min = [0];
+  i = 1;
+ }//odd 
+ 
+ //Loop for check max min of pair element
+ 
+ for (i < n-1){
+  if(arr[i] > arr[i+1]
+     {
+       if(arr[i] > minmax.max
+        minmax.max = arr[i];   
+       if(arr[i+1] < minmax.min
+        minmax.min = arr[i+1];         
+     }      
+   else {
+    if(arr[i+1] > minmax.max 
+       minmax.max = arr[i+1];
+     if(arr[i] < minmax.min
+        minmax.min = arr[i]l;
+   }          
+        //Increment index by 2
+        i +=2;
+ }
+        
+ return  minmax;
+}//Pair
+        
+        
+        
+//Derived COde
+
+int main(){
+ int arr[] = {200,2,100,7,19};
+ int arr_size = 5;
+ Pair minmax = getMinMax(arr, arr_size);
+ 
+ cout<< minmax.min<< endl;
+ cout<< minmax.max << endl;
+ return 0;
+}        
